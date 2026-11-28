@@ -1,7 +1,7 @@
 """CLI chạy thực nghiệm huấn luyện & đánh giá DL2 chuẩn Zero Leakage.
 
 Ví dụ:
-    py -3.14 scripts/train_dl2.py --data-dir data/processed --model p300_atcnet \
+    py -3.14 scripts/training/train_dl2.py --data-dir data/processed --model p300_atcnet \
         --protocol cross_subject_5fold --epochs 2 --exp-name smoke_atcnet
 """
 
@@ -15,8 +15,8 @@ from typing import Any, Dict, List, Optional, Sequence
 
 import pandas as pd
 
-# Đảm bảo import được `src.*` ngay cả khi chạy trực tiếp `py -3.14 scripts/train_dl2.py`
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+# Đảm bảo import được `src.*` khi chạy trực tiếp từ thư mục con `scripts/training`.
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 

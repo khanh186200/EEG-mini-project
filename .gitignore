@@ -35,6 +35,11 @@ results/checkpoints/*
 
 # Allow lightweight handover & paper figures (< 2 MB each), block heavy caches
 !results/handover_standard/
+!results/handover_standard/*/
+results/handover_standard/*/*
+!results/handover_standard/*/.gitkeep
+!results/handover_standard/*/*_per_fold.csv
+!results/handover_standard/*/*_preds.npz
 results/handover_standard/*.csv
 results/handover_standard/*.npz
 !results/figures/paper/
@@ -80,3 +85,4 @@ env/
 # ── OS ─────────────────────────────────────────
 .DS_Store
 Thumbs.db
+smoke_test/00_colab_setup.ipynb

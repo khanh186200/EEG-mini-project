@@ -1,7 +1,7 @@
 """Đo tốc độ suy luận single-trial (ms/epoch, Mục 3.6 Đề cương) cho DL2 trên GPU & CPU.
 
 Chạy độc lập, không train lại mô hình:
-    py -3.14 scripts/benchmark_latency.py
+    py -3.14 scripts/evaluation/benchmark_latency.py
 """
 
 from __future__ import annotations
@@ -18,7 +18,7 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 

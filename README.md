@@ -25,8 +25,9 @@ EEG-mini-project/
 │   └── processed/                      # Dữ liệu sau tiền xử lý (epochs, .fif, .npy) (ignored)
 │
 ├── scripts/
-│   ├── download_oddball.py             # Tải dữ liệu từ S3 OpenNeuro
-│   └── explore_data.py                 # Khám phá dữ liệu, xuất hình vào results/figures/exploration
+│   ├── data/                            # Tải, audit, khám phá, tiền xử lý và chia tập
+│   ├── training/                        # Standard ML, DL1, DL2 và full-training orchestration
+│   └── evaluation/                      # Latency, XAI, biểu đồ và file bàn giao
 │
 ├── notebooks/                          # Notebook phẳng: 01_exploration, 02_preprocessing, 03_erp, 04_ml, 05_dl
 │
@@ -75,7 +76,7 @@ pip install -r requirements.txt
 Dữ liệu được tải tự động đa luồng trực tiếp từ S3 Bucket của OpenNeuro qua script:
 
 ```powershell
-python scripts/download_oddball.py
+python scripts/data/download_oddball.py
 ```
 
 - Toàn bộ dữ liệu 42 subjects và metadata đi kèm sẽ được tải và lưu tập trung tại thư mục `data/raw/oddball_data/`.
@@ -86,7 +87,7 @@ python scripts/download_oddball.py
 
 ## 🔄 5. Quy trình thực hiện (Pipeline)
 
-1. **Khám phá dữ liệu (`scripts/explore_data.py` / `notebooks/01_exploration.ipynb`)**:
+1. **Khám phá dữ liệu (`scripts/data/explore_data.py` / `notebooks/01_exploration.ipynb`)**:
    - Kiểm tra thông tin kênh đo, tỷ lệ lấy mẫu, sự kiện (Events/Triggers: Target vs. Standard).
 2. **Tiền xử lý (`notebooks/02_preprocessing.ipynb` & `src/preprocessing/`)**:
    - Lọc dải tần (Band-pass filter, e.g., 0.1 - 30 Hz), lọc Notching 50Hz.

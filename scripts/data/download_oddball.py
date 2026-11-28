@@ -5,8 +5,8 @@ from botocore import UNSIGNED
 from botocore.client import Config
 from tqdm import tqdm
 
-# Lưu vào <project_root>/data/raw/oddball_data (script nằm ở <project_root>/scripts/)
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# Lưu vào <project_root>/data/raw/oddball_data
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 DATA_DIR = os.path.join(PROJECT_ROOT, "data", "raw", "oddball_data")
 
 # Toàn bộ 42 subjects (sub-01..sub-42) đều có đủ dữ liệu task-oddball.

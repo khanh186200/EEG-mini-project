@@ -13,7 +13,7 @@ import pytest
 import torch
 from captum.attr import IntegratedGradients
 
-from scripts.train_dl2 import main as train_dl2_main
+from scripts.training.train_dl2 import main as train_dl2_main
 from src.evaluation.metrics import (
     METRIC_NAMES,
     PREDICTION_COLUMNS,

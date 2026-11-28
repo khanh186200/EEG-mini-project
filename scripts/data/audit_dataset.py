@@ -1,6 +1,6 @@
 """Comprehensive READ-ONLY BIDS & Signal Audit for OpenNeuro ds004621 (Oddball P300).
 
-Tệp: scripts/audit_dataset.py
+Tệp: scripts/data/audit_dataset.py
 
 Mục đích:
     Thực hiện kiểm toán toàn diện (chế độ CHỈ ĐỌC - READ-ONLY tuyệt đối đối với
@@ -13,8 +13,8 @@ Mục đích:
                                         kèm RED FLAGS, phân tích XAI & Data Contract.
 
 Cách chạy:
-    python scripts/audit_dataset.py
-    python scripts/audit_dataset.py --data-dir data/raw/oddball_data --reports-dir reports
+    python scripts/data/audit_dataset.py
+    python scripts/data/audit_dataset.py --data-dir data/raw/oddball_data --reports-dir reports
 """
 
 from __future__ import annotations
@@ -1375,7 +1375,7 @@ def run_audit(data_dir: Path, reports_dir: Path) -> None:
 
 
 def parse_args() -> argparse.Namespace:
-    project_root = Path(__file__).resolve().parents[1]
+    project_root = Path(__file__).resolve().parents[2]
     parser = argparse.ArgumentParser(
         description="Read-only comprehensive audit for OpenNeuro ds004621 (Oddball P300)."
     )

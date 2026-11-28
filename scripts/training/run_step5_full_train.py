@@ -29,12 +29,12 @@ import numpy as np
 import pandas as pd
 import torch
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
-from scripts.train_dl2 import build_arg_parser as build_train_arg_parser
-from scripts.train_dl2 import run_experiment
+from scripts.training.train_dl2 import build_arg_parser as build_train_arg_parser
+from scripts.training.train_dl2 import run_experiment
 from src.evaluation.metrics import METRIC_NAMES, PREDICTION_COLUMNS
 from src.training.dataset_dl2 import natural_sort_key
 

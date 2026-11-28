@@ -1,8 +1,8 @@
 """CLI xuất trọn bộ 6 biểu đồ chuẩn bài báo (300 DPI PNG + Vector PDF).
 
 Ví dụ:
-    py -3.14 scripts/generate_figures.py
-    py -3.14 scripts/generate_figures.py --external-results-dir results/handover_all
+    py -3.14 scripts/evaluation/generate_figures.py
+    py -3.14 scripts/evaluation/generate_figures.py --external-results-dir results/handover_all
 """
 
 from __future__ import annotations
@@ -12,7 +12,7 @@ import sys
 from pathlib import Path
 from typing import Optional, Sequence
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 

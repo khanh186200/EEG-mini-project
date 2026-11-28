@@ -1,5 +1,5 @@
 ﻿"""Bộ công cụ khám phá toàn diện dữ liệu EEG (Oddball Paradigm - P300)
-Tệp: scripts/explore_data.py
+Tệp: scripts/data/explore_data.py
 
 Quy trình 6 bước chuẩn mực trong EEG Signal Processing:
 1. 01 - Dataset Overview: Quét file, kiểm tra sampling rate, số kênh, dung lượng, thời lượng ghi.

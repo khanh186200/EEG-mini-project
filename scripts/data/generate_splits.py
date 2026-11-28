@@ -1,6 +1,6 @@
 """Sinh bộ chia tập chuẩn chống rò rỉ dữ liệu (Zero-Leakage Splits) cho Oddball P300.
 
-Tệp: scripts/generate_splits.py
+Tệp: scripts/data/generate_splits.py
 
 Tạo tệp `{data_dir}/splits.json` từ `{data_dir}/metadata.csv` với seed cố định (42),
 bao gồm 3 giao thức đánh giá chuẩn:

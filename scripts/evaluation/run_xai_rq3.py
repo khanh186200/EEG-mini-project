@@ -1,7 +1,7 @@
 """CLI chạy Pipeline Explainable AI (RQ3 — 4 lớp kiểm chứng) & sinh báo cáo Bước 6.
 
 Ví dụ:
-    py -3.14 scripts/run_xai_rq3.py --resume
+    py -3.14 scripts/evaluation/run_xai_rq3.py --resume
 """
 
 from __future__ import annotations
@@ -11,7 +11,7 @@ import sys
 from pathlib import Path
 from typing import Optional, Sequence
 
-_PROJECT_ROOT = Path(__file__).resolve().parent.parent
+_PROJECT_ROOT = Path(__file__).resolve().parents[2]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
